@@ -1,0 +1,48 @@
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs and cache files
+*.log
+*~
+.cache/
+
+# Personal/sensitive files
+home-files/.bash_history
+config/fish/fish_variables
+config/gh/hosts.yml
+
+# Compiled files
+*.o
+*.so
+*.pyc
+
+# Temporary files
+.tmp/
+temp/
+
+# Editor backups
+*.bak
+*.swp
+*.swo
+*~
+
+# IDE files
+.vscode/settings.json
+.idea/
+
+# Node modules (if any)
+node_modules/
+
+# Application specific
+config/nvim/lazy-lock.json
+config/Code/
+config/google-chrome/
+config/BraveSoftware/
+config/microsoft-edge/
+config/chromium/

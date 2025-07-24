@@ -1,0 +1,63 @@
+# ===================== MAIN SWAY CONFIG =====================
+
+# Set default font
+font pango:Maple Mono Regular 10
+
+# ------------------------------------------------------------
+# === Include Modular Config Files ===
+# ------------------------------------------------------------
+include ~/.config/sway/inputs.conf
+include ~/.config/sway/bindings.conf
+include ~/.config/sway/colors.conf
+include ~/.config/sway/env.conf
+
+# ------------------------------------------------------------
+# === Outputs & Wallpaper ===
+# ------------------------------------------------------------
+set $file_explorer GTK_THEME=diinki-retro-dark nautilus
+
+# Monitor configuration - currently only DP-1 is connected
+# DP-1 at its native resolution and maximum refresh rate (240Hz)
+output DP-1 pos 0 0 res 2560x1440@239.970Hz
+
+# Additional monitors (uncomment and adjust when connected):
+# output DP-3 pos 1920 0 res 2560x1440@164.835Hz
+# output HDMI-A-2 pos 4480 0 res 3840x2160@59.997Hz
+
+# Use swaybg to set wallpaper for currently connected monitor
+exec_always swaybg -o DP-1 -i ~/Pictures/wallpapers/colorshift.png -m fill
+
+# Additional wallpapers for when other monitors are connected:
+# exec_always swaybg -o DP-3 -i ~/Pictures/wallpapers/STRAY_KITTY_CLUB-mint.png -m fill \
+#                   -o DP-1 -i ~/Pictures/wallpapers/colorshift.png -m fill \
+#                   -o HDMI-A-2 -i ~/Pictures/wallpapers/2CB.png -m fill
+
+# ------------------------------------------------------------
+# === Autostart Services ===
+# ------------------------------------------------------------
+exec_always --no-startup-id /home/mrprotonman/.local/bin/autotiling
+exec_always --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+exec_always --no-startup-id gnome-keyring-daemon --start --components=secrets,ssh
+exec_always --no-startup-id nm-applet
+
+
+# ------------------------------------------------------------
+# === Waybar (Status Bar) ===
+# ------------------------------------------------------------
+bar {
+  swaybar_command waybar
+}
+
+# ------------------------------------------------------------
+# === Idle & Lock ===
+# ------------------------------------------------------------
+exec_always swayidle -w \
+  timeout 300 'swaylock -f -c 000000' \
+  timeout 600 'swaymsg "output * dpms off"' \
+  resume 'swaymsg "output * dpms on"' \
+  before-sleep 'swaylock -f -c 000000'
+
+# ------------------------------------------------------------
+# === Security ===
+# ------------------------------------------------------------
+
