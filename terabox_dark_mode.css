@@ -1,0 +1,168 @@
+/*
+TeraBox Dark Mode CSS
+Apply this CSS using Stylus browser extension or developer tools
+*/
+
+/* Main background and text colors */
+body, html {
+    background-color: #1a1a1a !important;
+    color: #e0e0e0 !important;
+}
+
+/* Header and navigation */
+.header, .nav, .navbar, .top-bar {
+    background-color: #2d2d2d !important;
+    color: #e0e0e0 !important;
+}
+
+/* Sidebar */
+.sidebar, .left-panel, .menu-panel {
+    background-color: #252525 !important;
+    color: #e0e0e0 !important;
+}
+
+/* Main content area */
+.main-content, .content, .file-list, .grid-view {
+    background-color: #1a1a1a !important;
+    color: #e0e0e0 !important;
+}
+
+/* File items and cards */
+.file-item, .card, .item, .file-card {
+    background-color: #2d2d2d !important;
+    color: #e0e0e0 !important;
+    border: 1px solid #404040 !important;
+}
+
+.file-item:hover, .card:hover, .item:hover {
+    background-color: #3d3d3d !important;
+}
+
+/* Buttons */
+button, .btn, .button {
+    background-color: #404040 !important;
+    color: #e0e0e0 !important;
+    border: 1px solid #606060 !important;
+}
+
+button:hover, .btn:hover, .button:hover {
+    background-color: #505050 !important;
+}
+
+/* Primary buttons */
+.btn-primary, .primary-btn, .upload-btn {
+    background-color: #0066cc !important;
+    color: #ffffff !important;
+}
+
+.btn-primary:hover, .primary-btn:hover, .upload-btn:hover {
+    background-color: #0056b3 !important;
+}
+
+/* Input fields */
+input, textarea, select {
+    background-color: #2d2d2d !important;
+    color: #e0e0e0 !important;
+    border: 1px solid #404040 !important;
+}
+
+input:focus, textarea:focus, select:focus {
+    border-color: #0066cc !important;
+    background-color: #3d3d3d !important;
+}
+
+/* Modals and popups */
+.modal, .popup, .dialog {
+    background-color: #2d2d2d !important;
+    color: #e0e0e0 !important;
+}
+
+.modal-header, .popup-header {
+    background-color: #404040 !important;
+    color: #e0e0e0 !important;
+}
+
+/* Context menus */
+.context-menu, .dropdown-menu {
+    background-color: #2d2d2d !important;
+    color: #e0e0e0 !important;
+    border: 1px solid #404040 !important;
+}
+
+.context-menu li:hover, .dropdown-menu li:hover {
+    background-color: #404040 !important;
+}
+
+/* Progress bars */
+.progress-bar, .upload-progress {
+    background-color: #404040 !important;
+}
+
+.progress-bar-fill, .progress {
+    background-color: #0066cc !important;
+}
+
+/* Scrollbars */
+::-webkit-scrollbar {
+    width: 12px;
+    background-color: #2d2d2d;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #404040;
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #505050;
+}
+
+/* Links */
+a, .link {
+    color: #66b3ff !important;
+}
+
+a:hover, .link:hover {
+    color: #80c4ff !important;
+}
+
+/* Tables */
+table, .table {
+    background-color: #1a1a1a !important;
+    color: #e0e0e0 !important;
+}
+
+th, .table-header {
+    background-color: #2d2d2d !important;
+    color: #e0e0e0 !important;
+}
+
+tr:nth-child(even), .table-row:nth-child(even) {
+    background-color: #252525 !important;
+}
+
+/* Icons - invert white icons to be visible on dark background */
+.icon, i[class*="icon"], svg {
+    filter: invert(0.8) !important;
+}
+
+/* Text selection */
+::selection {
+    background-color: #0066cc !important;
+    color: #ffffff !important;
+}
+
+/* Remove any forced light backgrounds */
+* {
+    background-color: inherit !important;
+}
+
+/* Specific TeraBox selectors (may need adjustment based on actual DOM) */
+.terabox-main, .tb-main, .main-container {
+    background-color: #1a1a1a !important;
+}
+
+.file-browser, .browser-content {
+    background-color: #1a1a1a !important;
+    color: #e0e0e0 !important;
+}
