@@ -23,6 +23,7 @@ Personal dotfiles for openSUSE Tumbleweed with Hyprland/Sway setup.
 - Starship prompt
 - Kitty terminal
 - Foot terminal
+- Ghostty terminal
 
 ### Development
 - Neovim configuration with LazyVim
